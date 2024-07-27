@@ -6,22 +6,45 @@
   "private": true,
   "license": "MIT",
   "scripts": {
+    "start:dev": "nest start --watch",
+    "start:prod": "node dist/src/main",
+    "build": "nest build",
     "prepare": "husky",
     "format": "prettier --write '{src,test}/**/*.ts'",
+    "lint": "eslint",
     "lint:staged": "lint-staged",
+    "lint:fix": "eslint --fix",
+    "test": "TZ=UTC jest --config test/jest.json --runInBand --passWithNoTests --forceExit",
     "deadcode": "ts-prune --project tsconfig.json --unusedInModule --skip \"\\.json$\"",
     "spell": "cspell lint --config cspell.json \"{src,test}/**/*.ts\" --color --gitignore --no-must-find-files --no-summary --no-progress || true",
     "commit": "git-cz"
   },
+  "dependencies": {
+    "@nestjs/common": "^10.3.10",
+    "@nestjs/config": "^3.2.3",
+    "@nestjs/core": "^10.3.10",
+    "reflect-metadata": "^0.2.2",
+    "rxjs": "^7.8.1"
+  },
   "devDependencies": {
     "@commitlint/cli": "^19.3.0",
     "@commitlint/config-conventional": "^19.2.2",
+    "@nestjs/cli": "^10.4.2",
+    "@nestjs/schematics": "^10.1.3",
+    "@nestjs/testing": "^10.3.10",
+    "@types/eslint-config-prettier": "^6.11.3",
+    "@types/node": "^20.14.12",
+    "@typescript-eslint/parser": "^7.17.0",
     "cspell": "^8.12.1",
     "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^9.8.0",
+    "eslint-config-prettier": "^9.1.0",
     "husky": "^9.1.3",
     "lint-staged": "^15.2.7",
     "prettier": "^3.3.3",
-    "ts-prune": "^0.10.3"
+    "ts-prune": "^0.10.3",
+    "typescript": "^5.5.4",
+    "typescript-eslint": "^7.17.0"
   },
   "config": {
     "commitizen": {

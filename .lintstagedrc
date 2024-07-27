@@ -1,7 +1,6 @@
 {
   "{src,test}/**/*.{ts,tsx,json}": [
     "prettier --write '{src,test}/**/*.ts'",
-    "eslint",
-    "stop-only --file"
+    "eslint"
   ]
 }
