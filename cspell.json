@@ -1,7 +1,19 @@
 {
   "version": "0.2",
   "language": "en",
-  "words": [],
+  "words": [
+    "zemd",
+    "dtos",
+    "milis",
+    "streamable",
+    "casl",
+    "spreadsheetml",
+    "officedocument",
+    "openxmlformats",
+    "maxlength",
+    "headerapikey",
+    "ntegral"
+  ],
   "ignorePaths": [
     "node_modules/**",
     "endpoints/**",
