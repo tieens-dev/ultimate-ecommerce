@@ -76,20 +76,20 @@ async function bootstrap() {
   if (errors.length > 0) {
     const messageService = app.get(MessageService)
     const errorsMessage = messageService.setValidationMessage(errors)
-    logger.error(errorsMessage, 'HawkAPI')
+    logger.error(errorsMessage, 'AppAPI')
     throw new Error('Env Variable Invalid')
   }
 
-  logger.log(`Job is ${jobEnable}`, 'HawkAPI')
+  logger.log(`Job is ${jobEnable}`, 'AppAPI')
   logger.log(
     `Http is ${httpEnable}, ${
       httpEnable ? 'routes registered' : 'no routes registered'
     }`,
-    'HawkAPI'
+    'AppAPI'
   )
-  logger.log(`Http versioning is ${versionEnable}`, 'HawkAPI')
+  logger.log(`Http versioning is ${versionEnable}`, 'AppAPI')
 
-  logger.log(`Http Server running on ${await app.getUrl()}`, 'HawkAPI')
-  logger.log(`Database uri ${databaseUri}`, 'HawkAPI')
+  logger.log(`Http Server running on ${await app.getUrl()}`, 'AppAPI')
+  logger.log(`Database uri ${databaseUri}`, 'AppAPI')
 }
 bootstrap()
