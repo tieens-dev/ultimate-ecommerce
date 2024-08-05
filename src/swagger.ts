@@ -60,5 +60,5 @@ export default async function (app: NestApplication) {
     }
   })
 
-  logger.log(`Docs will serve on ${docPrefix}`, 'HawkAPISwagger')
+  logger.log(`Docs will serve on ${docPrefix}`, 'AppAPISwagger')
 }

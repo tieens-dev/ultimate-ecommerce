@@ -8,7 +8,7 @@ import {
 export default registerAs(
   'app',
   (): Record<string, any> => ({
-    name: process.env.APP_NAME ?? 'HawkAPI',
+    name: process.env.APP_NAME ?? 'AppAPI',
     env: process.env.APP_ENV ?? ENUM_APP_ENVIRONMENT.DEVELOPMENT,
     timezone: process.env.APP_TIMEZONE ?? ENUM_APP_TIMEZONE.ASIA_SINGAPORE,
     repoVersion: version,
